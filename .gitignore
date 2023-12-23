@@ -8,6 +8,7 @@ __pycache__/
 
 resources/
 
+
 # Distribution / packaging
 .Python
 build/
