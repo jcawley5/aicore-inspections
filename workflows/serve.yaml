@@ -26,7 +26,7 @@ spec:
           custom:
             container:
               name: kfserving-container
-              image: <DOCKER-IMAGE-SERVING-REPO>
+              image: jcawley5/restaurant-inspections-serve
               ports:
                 - containerPort: 9001
                   protocol: TCP
