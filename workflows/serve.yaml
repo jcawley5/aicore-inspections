@@ -35,7 +35,7 @@ spec:
         predictor:
           minReplicas: 1
           containers:
-            name: kfserving-container
+          - name: kfserving-container
             image: jcawley5/restaurant-inspections-serve
             ports:
               - containerPort: 9001
