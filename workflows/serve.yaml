@@ -35,13 +35,12 @@ spec:
       default:
         predictor:
           minReplicas: 1
-          custom:
-            container:
-              name: kfserving-container
-              image: jcawley5/restaurant-inspections-serve
-              ports:
-                - containerPort: 9001
-                  protocol: TCP
-              env:
-                - name: STORAGE_URI
-                  value: "{{inputs.artifacts.inspectionMoRegressionModel}}"
+          containers:
+            name: kfserving-container
+            image: jcawley5/restaurant-inspections-serve
+            ports:
+              - containerPort: 9001
+                protocol: TCP
+            env:
+              - name: STORAGE_URI
+                value: "{{inputs.artifacts.inspectionMoRegressionModel}}"
