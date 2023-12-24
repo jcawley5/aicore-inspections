@@ -32,14 +32,14 @@ spec:
       labels: |
         ai.sap.com/resourcePlan: starter
     spec: |
-      predictor:
-        minReplicas: 1
-        containers:
-          name: kfserving-container
-          image: jcawley5/restaurant-inspections-serve
-          ports:
-            - containerPort: 9001
-              protocol: TCP
-          env:
-            - name: STORAGE_URI
-              value: "{{inputs.artifacts.inspectionMoRegressionModel}}"
+        predictor:
+          minReplicas: 1
+          containers:
+            name: kfserving-container
+            image: jcawley5/restaurant-inspections-serve
+            ports:
+              - containerPort: 9001
+                protocol: TCP
+            env:
+              - name: STORAGE_URI
+                value: "{{inputs.artifacts.inspectionMoRegressionModel}}"
