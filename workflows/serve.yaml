@@ -24,6 +24,13 @@ spec:
     - name: docker-registry-secret
   template:
     apiVersion: "serving.kserve.io/v1beta1"
+    metadata:
+      annotations: |
+        autoscaling.knative.dev/metric: concurrency
+        autoscaling.knative.dev/target: 1
+        autoscaling.knative.dev/target-burst-capacity: 0
+      labels: |
+        ai.sap.com/resourcePlan: starter
     spec: |
       default:
         predictor:
